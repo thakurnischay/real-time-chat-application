@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="login-body">
+    <div class="login-container">
+      <h2>Welcome 👋</h2>
+      <p>Enter your username to join the chat</p>
+      <input type="text" placeholder="Username" />
+      <button onclick="joinChat()">Join</button>
+      <script>
+        function joinChat() {
+          const name = document.querySelector("input").value.trim();
+          if (name) {
+            sessionStorage.setItem("username", name);
+            window.location.href = "chat.html";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
